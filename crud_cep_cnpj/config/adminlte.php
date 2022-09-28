@@ -64,7 +64,7 @@ return [
     */
 
     'logo' => '<b>Bruno Chrisostomo</b>',
-    'logo_img' => '/var/www/html/crud_viacep_receitaws/crud_cep_cnpj/app/Imagens/simbuloB.jpg',
+    'logo_img' => 'public/Imagens/simbuloB.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => '/var/www/html/crud_viacep_receitaws/crud_cep_cnpj/app/Imagens/simbuloB.jpg',
+            'path' => 'public/Imagens/simbuloB.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -109,7 +109,7 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => '/var/www/html/crud_viacep_receitaws/crud_cep_cnpj/app/Imagens/simbuloB.jpg',
+            'path' => 'public/Imagens/simbuloB.jpg',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,

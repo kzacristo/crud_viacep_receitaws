@@ -34,7 +34,13 @@ class CnpjController extends Controller
         return json_encode (
             [
                 'cnpj' => $request['cnpj'],
-                'nome' => $response['nome']
+                'razao_social' => $response['natureza_juridica'],
+                'nome_fantasia' => $response['nome'],
+                'telefone' => $response['telefone'],
+                'situacao' => $response['situacao'],
+                'cep' => $response['cep'],
+                'numero' => $response['numero'],
+                'logradouro' => $response['logradouro']
             ]
         );    
     }

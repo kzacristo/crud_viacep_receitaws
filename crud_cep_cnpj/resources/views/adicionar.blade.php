@@ -21,29 +21,53 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group" data-step="1"><label class="radio-inline">
-                            <input type="radio" name="type" class="client-type" value="pj" checked="">Pessoa Jurídica</label><label class="radio-inline"> &nbsp;&nbsp;
-                            <input type="radio" name="type" class="client-type" value="pf">Pessoa Física</label>
+                            <input type="radio" id="type_pj" name="type" class="client-type" value="pj" checked="">Pessoa Jurídica</label><label class="radio-inline"> &nbsp;&nbsp;
+                            <input type="radio" id="type_pf" name="type" class="client-type" value="pf">Pessoa Física</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="cnpj_1">
                     <div class="form-group">
                         <label class="control-label">CNPJ<span style="color: red;"><sup>•</sup></span></label>
                         <input type="text" id="cnpj" onblur="getCNPJ(this)" name="cnpj" class="form-control not-required-cnpj not-value rounded-form" data-step="2" maxlength="18" required="" value="">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3" id="cpf_1">
                     <div class="form-group">
-                        <label class="control-label">Razão Social<span style="color: red;"><sup>•</sup></span></label>
-                        <input type="text" id="razao_social" name="razao_social" class="form-control not-required-cpf not-value" data-step="2" required="">
+                        <label class="control-label">CPF<span style="color: red;"><sup>•</sup></span></label>
+                        <input type="text" id="cnpj" name="cpf" class="form-control not-required-cnpj not-value rounded-form" data-step="2" maxlength="14" required="" value="">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6" id="cnpj_2">
+                    <div class="form-group">
+                        <label class="control-label">Razão Social<span style="color: red;"><sup>•</sup></span></label>
+                        <input type="text" id="razao_social" name="razao_social" class="form-control not-required-cpf not-value" data-step="2" required="" value="">
+                    </div>
+                </div>
+                <div class="col-md-6" id="cpf_2">
+                    <div class="form-group">
+                        <label class="control-label">Nome<span style="color: red;"><sup>•</sup></span></label>
+                        <input type="text" id="nome" name="nome" class="form-control not-required-cpf not-value" data-step="2" required="">
+                    </div>
+                </div>
+                <div class="col-md-3" id="cnpj_3">
                     <div class="form-group">
                         <label class="control-label">Nome Fantasia<span style="color: red;"><sup>•</sup></span></label>
                         <input type="text" id="nome_fantasia" name="nome_fantasia" class="form-control not-required-cpf not-value" data-step="2" required="">
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-md-3" id="cpf_3">
+                    <div class="form-group">
+                        <label class="control-label">Apelido<span style="color: red;"><sup>•</sup></span></label>
+                        <input type="text" id="apelido" name="apelido" class="form-control not-required-cpf not-value" data-step="2" required="">
+                    </div>
+                </div>
+                <div class="col-md-3" id="cpf_3">
+                    <div class="form-group">
+                        <label class="control-label">RG<span style="color: red;"><sup>•</sup></span></label>
+                        <input type="text" id="rg" name="rg" class="form-control not-required-cpf not-value" data-step="2" required="">
+                    </div>
+                </div>
+                <div class="col-sm-3" id="cnpj_4">
                     <div class="form-group">
                         <label class="control-label">Indicador de Inscrição Estadual<span style="color: red;"><sup>•</sup></span></label>
                         <div class="select2-purple">
@@ -56,25 +80,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="cnpj_5">
                     <div class="form-group">
                         <label class="control-label">Inscrição Estadual<span style="color: red;"><sup>•</sup></span></label>
                         <input type="text" name="inscricao_estadual" id="incricao_estadual" class="form-control not-value" required="">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="cnpj_6">
                     <div class="form-group">
                         <label class="control-label">Inscrição Municipal<span style="color: red;"><sup>•</sup></span></label>
                         <input type="text" name="inscricao_municipal" id="incricao_municipal" class="form-control not-value" required="">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="cnpj_7">
                     <div class="form-group">
                         <label class="control-label">Situação CPNJ<span style="color: red;"><sup>•</sup></span></label>
                         <input type="text" name="inscricao_municipal" id="incricao_municipal" class="form-control not-value" required="">
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" id="cnpj_8">
                     <div class="form-group">
                         <label class="control-label">Indicador de Inscrição Estadual<span style="color: red;"><sup>•</sup></span></label>
                         <div class="select2-purple">
@@ -86,9 +110,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" id="cnpj_9">
                     <div class="form-group">
-                        <label class="control-label">Indicador de Inscrição Estadual<span style="color: red;"><sup>•</sup></span></label>
+                        <label class="control-label">Ativo<span style="color: red;"><sup>•</sup></span></label>
+                        <div class="select2-purple">
+                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option value="">Selecione</option>
+                                <option value="0">Não</option>
+                                <option value="1">Sim</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" id="cpf_5">
+                    <div class="form-group">
+                        <label class="control-label">Ativo<span style="color: red;"><sup>•</sup></span></label>
                         <div class="select2-purple">
                             <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                                 <option value="">Selecione</option>
